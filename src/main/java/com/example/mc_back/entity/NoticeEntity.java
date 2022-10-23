@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 @Getter
 @Entity
 @Table(name = "notice")
-public class NoticeEntity {
+public class NoticeEntity extends TimeEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "id")
@@ -21,16 +21,4 @@ public class NoticeEntity {
 
     @Column(name = "content", columnDefinition = "TEXT", nullable = false)
     private String content; //내용
-
-    @Column(name = "created_at", nullable = false)
-    private Timestamp created_at; // 작성일시
-
-    @Column(name = "created_by", length = 10, nullable = false)
-    private String created_by; // 작성자
-
-    @Column(name = "updated_by", length = 10, nullable = false)
-    private String updated_by; // 수정자
-
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updated_at; // 수정일시
 }
