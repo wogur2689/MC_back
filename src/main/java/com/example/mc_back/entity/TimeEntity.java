@@ -19,7 +19,7 @@ public abstract class TimeEntity {
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_by")
+    @Column(name = "updated_at")
     private LocalDateTime updatedAy;
 
     @Column(name = "created_by", length = 10, nullable = true)
