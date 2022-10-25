@@ -21,6 +21,7 @@ public class MainController {
     public McApi getFaq() {
         return new McApi(new CommonResult(ApiCode.API_0000.getCode(), ApiCode.API_0000.getMsg()));
     }
+
     /* 자주하는 질문 답변 */
     @PostMapping("/faq_answer")
     public McApi getFaqAnswer() {
