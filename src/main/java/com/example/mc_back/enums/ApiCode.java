@@ -11,7 +11,7 @@ public enum ApiCode {
     ,API_1003("1002", "네트워크 에러")
 
     /* 기타오류 */
-    ,API_9999("9999", "기타 오류");
+    ,API_9999("9999", "시스템 오류");
 
     private String code;
     private String msg;
