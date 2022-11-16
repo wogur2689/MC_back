@@ -28,7 +28,6 @@
                 class="sidebar_btn"
                 id="btn_home"
                 style="cursor: pointer"
-                onclick="location.href='index.html';"
         >
             <img src="./img/icons/light_index.svg" />
         </div>
@@ -36,7 +35,6 @@
                 class="sidebar_btn"
                 id="btn_introduce"
                 style="cursor: pointer"
-                onclick="location.href='introduce.html';"
         >
             <img src="./img/icons/dark_introduce.svg" />
         </div>
@@ -44,7 +42,6 @@
                 class="sidebar_btn"
                 id="btn_vision"
                 style="cursor: pointer"
-                onclick="location.href='footprints.html';"
         >
             <img src="./img/icons/dark_shoeprints.svg" />
         </div>
@@ -52,7 +49,6 @@
                 class="sidebar_btn"
                 id="btn_plan"
                 style="cursor: pointer"
-                onclick="location.href='recruit.html';"
         >
             <img src="./img/icons/dark_recruit.svg" />
         </div>
@@ -60,7 +56,6 @@
                 class="sidebar_btn"
                 id="btn_goal"
                 style="cursor: pointer"
-                onclick="location.href='qna.html';"
         >
             <img src="./img/icons/dark_headset.svg" />
         </div>
@@ -77,13 +72,7 @@
 
         <div id="main_content_box">
             <div id="content_box">
-                <p id="content">
-                    function index() {<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;introduce();<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;vision();<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;plan();<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;goal(); <br />}
-                </p>
+                <p id="content"></p>
             </div>
         </div>
     </main>
