@@ -36,6 +36,7 @@ public class MainController {
             log.info("bindResult : {}", bindingResult);
             throw new McException(ApiCode.API_1001);
         }
+
         //자주하는 질문 저장
         String code = faqService.faqSave(request);
         String msg = String.valueOf(ApiCode.valueOf(code));
