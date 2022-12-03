@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
     <html lang="ko">
     <head>
@@ -22,7 +23,7 @@
     <body>
     <div id="sidebar">
         <div class="sidebar_btn">
-            <img id="main_logo" src="./img/icons/mc_favicon.svg" />
+            <img id="main_logo" src="../resources/asset/img/icons/mc_favicon.svg" />
         </div>
         <div
                 class="sidebar_btn"
