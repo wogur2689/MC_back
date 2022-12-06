@@ -27,6 +27,8 @@ public class SupportService {
                 .name(map.get("name").toString())
                 .email(map.get("email").toString())
                 .phone(map.get("phone").toString())
+                .passOrNot(false)
+                .passOn(false)
                 .build();
         supportRepository.save(supportEntity);
         return "0000";

@@ -27,10 +27,18 @@ public class SupportEntity extends TimeEntity {
     @Column(name = "phone", length = 20, nullable = false)
     private String phone; //전화번호
 
+    @Column(name = "pass_or_not", length = 20)
+    private Boolean passOrNot; //합격여부
+
+    @Column(name = "pass_on", length = 20)
+    private Boolean passOn; //결과전달여부
+
     @Builder
-    public SupportEntity(String name, String email, String phone) {
+    public SupportEntity(String name, String email, String phone, Boolean passOrNot, Boolean passOn) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.passOrNot = passOrNot;
+        this.passOn = passOn;
     }
 }
