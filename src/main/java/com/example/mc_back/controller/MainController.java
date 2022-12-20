@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
@@ -37,7 +38,7 @@ public class MainController {
         }
         log.info("### 요청값 : {}", supportUser);
 
-        Map<String, Object> map = null;
+        Map<String, Object> map = new HashMap<>();
         map.put("name", supportUser.getName());
         map.put("email", supportUser.getEmail());
         map.put("phone", supportUser.getPhone());
