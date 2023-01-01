@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -31,10 +32,10 @@ public class MainController {
     /* 지원하기 등록 */
     @CrossOrigin(origins="*")
     @PostMapping("/support")
-    public McApi setSupport(@RequestBody @Valid SupportUser supportUser, BindingResult bindingResult) {
+    public McApi setSupport(@Valid SupportUser supportUser, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             log.info("### 검증오류 : {}", bindingResult);
-            throw new McException(ApiCode.API_1001);
+            return new McApi(new CommonResult(ApiCode.API_2001.getCode(), ApiCode.API_2001.getMsg()));
         }
         log.info("### 요청값 : {}", supportUser);
 
@@ -47,7 +48,7 @@ public class MainController {
         //데이터 저장
         log.info("### code : {}", code);
 
-        return new McApi(new CommonResult(ApiCode.API_0000.getCode(), ApiCode.API_0000.getMsg()));
+        return new McApi(new CommonResult(ApiCode.API_2000.getCode(), ApiCode.API_2000.getMsg()));
     }
 
     /* 공지사항 */
